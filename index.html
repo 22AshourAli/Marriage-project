@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="CRUD System" />
+    <meta name="keywords" content="crud , bookmark " />
+    <meta name="author" content="Ashour Ali" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="keywords" content="الشيخ علي عاشور مأذون شرعي بقرية الناصرية بني مزار">
+
+    <!-- FontAwesome6.2 Css File  -->
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- BootStrap 5.3 Css File  -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- Custome Css File -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <!-- svg Background  -->
+    <svg
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      width="100%"
+      height="100%"
+      viewBox="0 0 1600 900"
+      preserveAspectRatio="xMidYMax slice"
+    >
+      <defs>
+        <linearGradient id="bg">
+          <stop
+            offset="0%"
+            style="stop-color: rgba(130, 158, 249, 0.06)"
+          ></stop>
+          <stop offset="50%" style="stop-color: rgba(76, 190, 255, 0.6)"></stop>
+          <stop
+            offset="100%"
+            style="stop-color: rgba(115, 209, 72, 0.2)"
+          ></stop>
+        </linearGradient>
+        <path
+          id="wave"
+          fill="url(#bg)"
+          d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+	s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z"
+        />
+      </defs>
+      <g>
+        <use xlink:href="#wave" opacity=".3">
+          <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="translate"
+            dur="10s"
+            calcMode="spline"
+            values="270 230; -334 180; 270 230"
+            keyTimes="0; .5; 1"
+            keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+            repeatCount="indefinite"
+          />
+        </use>
+        <use xlink:href="#wave" opacity=".6">
+          <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="translate"
+            dur="8s"
+            calcMode="spline"
+            values="-270 230;243 220;-270 230"
+            keyTimes="0; .6; 1"
+            keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+            repeatCount="indefinite"
+          />
+        </use>
+        <use xlink:href="#wave" opacty=".9">
+          <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="translate"
+            dur="6s"
+            calcMode="spline"
+            values="0 230;-140 200;0 230"
+            keyTimes="0; .4; 1"
+            keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+            repeatCount="indefinite"
+          />
+        </use>
+      </g>
+    </svg>
+
+    <main class="container">
+      <!-- book area  -->
+      <header class="pt-3 book-inputs">
+        <!-- main title  -->
+        <h1 class="fw-bolder text-center text-white">
+          الشيخ \ علي عاشور سيد احمد
+        </h1>
+        <p class="lead fw-semibold text-center text-white">
+          مأذون شرعي بقرية الناصرية بني مزار
+        </p>
+        <h2 class="text-center fw-bold text-white">إدخال بيانات عقد الزواج</h2>
+
+        <section class="book-custom rounded-3 p-4 vstack gap-4">
+          <div>
+            <label for="الزوج" class="form-label fw-bold">إسم الزوج : </label>
+            <input
+              type="text"
+              class="form-control"
+              id="الزوج"
+              placeholder="إسم الزوج..."
+            />
+            <p class="alert alert-danger d-none" id="alertName">الاسم مطلوب</p>
+          </div>
+
+          <div>
+            <label for="الزوجة" class="form-label fw-bold">
+              إسم الزوجة :
+            </label>
+            <input
+              type="url"
+              class="form-control"
+              id="الزوجة"
+              placeholder="إسم الزوجة..."
+            />
+            <p class="alert alert-danger d-none" id="alertUrl">الاسم مطلوب</p>
+          </div>
+
+          <div>
+            <label for="dateTime" class="form-label fw-bold">
+              الوقت و التاريخ عقد الزواج :
+            </label>
+            <input
+              type="datetime-local"
+              class="form-control " 
+              id="dateTime"
+              placeholder="الوقت\التاريخ..."
+            />
+            <p class="alert alert-danger d-none" id="alerDate">
+              التاريخ مطلوب
+            </p>
+          </div>
+          <div>
+            <label for="ملاحظات" class="fw-bold form-label">
+              ملاحظات و شروط تم أخذها في عقد الزواج :</label
+            >
+            <textarea
+              name="ملاحظات"
+              id="ملاحظات"
+              class="w-100 form-control"
+              placeholder="ملاحظات"
+            ></textarea>
+          </div>
+
+          <button class="btn btn-primary mt-4" id="btnAdd">
+            إضافة عقد الزواج
+          </button>
+          <button class="btn btn-warning mt-4 d-none" id="btnUpdate">
+            تعديل عقد الزواج
+          </button>
+        </section>
+      </header>
+
+      <!-- section data  -->
+      <section class="book-data">
+        <input
+          type="search"
+          class="form-control form-control-sm w-50 mx-auto my-3"
+          placeholder="بحث..."
+          id="searchBook"
+        />
+
+        <div class="table-responsive book-custom p-3">
+          <table class="table table-sm mb-0 text-nowrap table-info text-center">
+            <thead>
+              <tr>
+                <th scope="col">إسم الزوج</th>
+                <th scope="col">إسم الزوجة</th>
+                <th scope="col">الوقت\التاريخ</th>
+                <th scope="col">ملاحظات \ شروط تم أخذها في العقد</th>
+                <th scope="col">أخذ القسيمة</th>
+                <th scope="col">تعديل</th>
+                <th scope="col">حذف</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
